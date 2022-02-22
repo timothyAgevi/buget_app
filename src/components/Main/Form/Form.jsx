@@ -31,6 +31,11 @@ const Form = () => {
        </Select>
       </FormControl>
      </Grid>
+     <Grid item xs ={6}>
+         <FormControl fullWidth> 
+         <Textfield />
+         </FormControl>
+     </Grid>
    </Grid>
   )
 }
