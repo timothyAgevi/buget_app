@@ -23,8 +23,8 @@ const List = () => {
                   </ListItemAvatar>
                   <ListItemText  primary ={transaction.category} secondary ={ `$${transaction.amount}  - ${transaction.date}`  }/>
                   <ListItemSecondaryAction>
-                      <IconButton>
-                          
+                      <IconButton edge ="end" aria-label='delete' >
+
                       </IconButton>
                   </ListItemSecondaryAction>
               </ListItem>
