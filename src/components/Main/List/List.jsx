@@ -9,7 +9,7 @@ const List = () => {
   const classes = useStyles();
 //   const { transactions, deleteTransaction } = useContext(ExpenseTrackerContext);
  const transactions = [
-     { id :1,}
+     { id :1, type:"Income",category:'Salary'}
  ]
   return (
     <MUIList dense ={false} className={classes.List}>
