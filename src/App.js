@@ -1,5 +1,5 @@
 import React from 'react'
-import Details from './components/Details/Details';
+import {Details} from './components';
 import {Grid} from '@material-ui/core'
 const App = () => {
   return (

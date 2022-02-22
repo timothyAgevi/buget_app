@@ -10,7 +10,7 @@ const Detail = () => {
         <CardHeader title="Income"/>
         <CardContent>
             <Typography variant='h5'> $50</Typography>
-            <Doughnut data ="Data"/>
+            {/* <Doughnut data ="Data"/> */}
         </CardContent>
     </Card>
   )
