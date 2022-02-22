@@ -15,7 +15,15 @@ const Main = () => {
     <Divider/>
      {/* Form */}
     </CardContent>
-   
+   <CardContent className={classes.CardContent}>
+       <Grid container spacing ={2}>
+           <Grid item xs={12}>
+            {/* <List/> */}
+           </Grid>
+
+       </Grid>
+
+   </CardContent>
     
 </Card>
     )
