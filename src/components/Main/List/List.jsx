@@ -12,7 +12,7 @@ const List = () => {
   return (
     <MUIList dense ={false} className={classes.List}>
         {transactions.map((transaction)=>(
-            <Slide direction="down" in mountOnEnter>
+            <Slide direction="down" in mountOnEnter unmountOnExit key ={transaction.id}>
               
             </Slide>
         ))}
