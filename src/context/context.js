@@ -8,9 +8,9 @@ export const ExpenseTrackerContext = createContext(initailState);
  export const Provider = ({ children})=>{
    //return jsx 
    return(
-       <ExpenseTrackerContext>
+       <ExpenseTrackerContext.Provider value ={{appName:'Expense Tracker'}}>
            {children}
-       </ExpenseTrackerContext>
+       </ExpenseTrackerContext.Provider>
    )
  }
 
