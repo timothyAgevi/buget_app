@@ -21,7 +21,7 @@ const List = () => {
                         <MoneyOff/>
                       </Avatar>
                   </ListItemAvatar>
-                  <ListItemText/>
+                  <ListItemText  primary ={transaction.category}/>
               </ListItem>
             </Slide>
         ))}
