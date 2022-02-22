@@ -6,6 +6,7 @@ const App = () => {
     const classes=useStyles()
 
   return (
+      <div>
    <Grid  container spacing={0} alignItems="centre" justify ="centre" style={{height:'100vh'}}>
        <Grid item xs= {12} sm={4}>
            <Details/>
@@ -19,6 +20,7 @@ const App = () => {
            <Details/>
        </Grid>
    </Grid>
+   </div>
   )
 }
 
