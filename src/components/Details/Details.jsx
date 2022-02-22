@@ -3,7 +3,7 @@ import { Card,CardHeader,CardContent,Typography }from '@material-ui/core';
 import {Doughnut} from'react-chartjs-2'
 import useStyles from './styles'
 
-const Detail = () => {
+const Details = () => {
     const classes = useStyles();
   return (
     <Card  className={classes.income}>
@@ -15,5 +15,4 @@ const Detail = () => {
     </Card>
   )
 }
-
-export default Detail
+export default Details
