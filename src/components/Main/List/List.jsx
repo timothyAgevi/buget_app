@@ -8,7 +8,9 @@ import useStyles from './styles';
 const List = () => {
   const classes = useStyles();
 //   const { transactions, deleteTransaction } = useContext(ExpenseTrackerContext);
- const transactions = []
+ const transactions = [
+     { id :1,}
+ ]
   return (
     <MUIList dense ={false} className={classes.List}>
         {transactions.map((transaction)=>(
