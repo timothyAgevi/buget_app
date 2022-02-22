@@ -1,5 +1,6 @@
 import React,{ useReducer,createContext}from 'react';
 
+import  contextReducer from './contextReducer';
 const initialState = [];
 
 //create own initialstate
