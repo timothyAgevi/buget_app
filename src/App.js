@@ -9,7 +9,7 @@ const App = () => {
        </Grid>
 
        <Grid item xs= {12} sm={4}>
-           <Details/>
+           Main
        </Grid>
 
        <Grid item xs= {12} sm={4}>
