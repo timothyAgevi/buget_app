@@ -3,7 +3,19 @@ import Details from './components/Details/Details';
 import {Grid} from '@material-ui/core'
 const App = () => {
   return (
-    <div>App</div>
+   <Grid  container spacing={0} alignItems="centre" justify ="centre" style={{height:'100vh'}}>
+       <Grid item xs= {12} sm={4}>
+           <Details/>
+       </Grid>
+
+       <Grid item xs= {12} sm={4}>
+           <Details/>
+       </Grid>
+
+       <Grid item xs= {12} sm={4}>
+           <Details/>
+       </Grid>
+   </Grid>
   )
 }
 
