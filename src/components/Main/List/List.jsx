@@ -9,7 +9,7 @@ const List = () => {
   const classes = useStyles();
 //   const { transactions, deleteTransaction } = useContext(ExpenseTrackerContext);
 const {deleteTransaction} =useContext(ExpenseTrackerContext);
-console.log(globalState)
+
  const transactions = [
      { id :1, type:"Income",category:'Salary', amount :50,date :'Wed Feb 22'},
      { id :2, type:"Expense",category:'Pets', amount :50,date :'ThursFeb 22'},
