@@ -3,7 +3,7 @@ import React,{ useReducer,createContext}from 'react';
 const initialState = [];
 
 //create own initialstate
-export const ExpenseTrackerContext = createContext(initailState);
+export const ExpenseTrackerContext = createContext(initialState);
 
 //functional Component
  export const Provider = ({ children})=>{
