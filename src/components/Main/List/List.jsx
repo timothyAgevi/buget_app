@@ -9,7 +9,7 @@ const List = () => {
   const classes = useStyles();
 //   const { transactions, deleteTransaction } = useContext(ExpenseTrackerContext);
  const transactions = [
-     { id :1, type:"Income",category:'Salary'}
+     { id :1, type:"Income",category:'Salary', amount :50,date :new Date()}
  ]
   return (
     <MUIList dense ={false} className={classes.List}>
@@ -21,7 +21,7 @@ const List = () => {
                         <MoneyOff/>
                       </Avatar>
                   </ListItemAvatar>
-                  <ListItemText  primary ={transaction.category}/>
+                  <ListItemText  primary ={transaction.category} secondary ={ `${transaction.amount}  - ${transaction.date}`  }/>
               </ListItem>
             </Slide>
         ))}
