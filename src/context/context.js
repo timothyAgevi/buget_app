@@ -8,7 +8,7 @@ export const ExpenseTrackerContext = createContext(initialState);
 //functional Component
  export const Provider = ({ children})=>{
 //useReducer hook i.e complex version of useState
-const [state, dispatch] = useReducer(reducer,initialState);
+const [state, dispatch] = useReducer(reducer,initialState);//reducer functiondefining hoe we change our state
 
    //return jsx 
    return(
