@@ -14,6 +14,10 @@ const [transactions, dispatch] = useReducer(contextReducer,initialState);//reduc
  const deleteTransaction =(id)=>{
    dispatch({type:'DELETE_TRANSACTION',payload:id})
  }
+
+ const addTransaction= ()=>{
+   dispatch({ type:'ADD_TRASACTION',payload:transaction});
+ }
    //return jsx 
    return(
        <ExpenseTrackerContext.Provider value ={{appName:'Expense Tracker'}}>
