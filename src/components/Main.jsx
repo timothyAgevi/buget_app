@@ -6,6 +6,12 @@ const Main = () => {
   return (
 <Card className={ classes.root}>
     <CardHeader title = "Buget Manager" subheader= "Powered by Speechly"/>
+    <Typography align ="center" variant="h5">  total Balance</Typography>
+    <Typography variant ="subtitle1" style={{ lineHeight:'1.5em',marginTop:'20px'}}>
+        {/* infoCard */}
+        try saying :Add income for $100 incategory Salary for monday
+    </Typography>
+    <Divider/>
 </Card>
     )
 }
