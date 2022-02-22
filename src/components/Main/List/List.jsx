@@ -10,7 +10,7 @@ const List = () => {
 //   const { transactions, deleteTransaction } = useContext(ExpenseTrackerContext);
  const transactions = [
      { id :1, type:"Income",category:'Salary', amount :50,date :'Wed Feb 22'},
-     { id :2, type:"Expense",category:'Pets', amount :50,date :'ThursFeb 22'}
+     { id :2, type:"Expense",category:'Pets', amount :50,date :'ThursFeb 22'},
      { id :1, type:"Income",category:'Business', amount :150,date :'Fri Feb 22'}
  ]
   return (
