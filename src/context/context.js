@@ -13,7 +13,7 @@ const [transactions, dispatch] = useReducer(contextReducer,initialState);//reduc
 //Actions/action creators
  const deleteTransaction =(id)=>{dispatch({type:'DELETE_TRANSACTION',payload:id}) }
 
- const addTransaction= ()=>{dispatch({ type:'ADD_TRASACTION',payload:transactions});//err transactions
+ const addTransaction= (transaction)=>{dispatch({ type:'ADD_TRASACTION',payload:transaction});//err transactions
  }
    //return jsx 
    return(
