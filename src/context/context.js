@@ -6,6 +6,11 @@ export const ExpenseTrackerContext = createContext(initailState);
 
 //functional Component
  export const Provider = ({ children})=>{
-
+   //return jsx 
+   return(
+       <ExpenseTrackerContext>
+           {children}
+       </ExpenseTrackerContext>
+   )
  }
 
