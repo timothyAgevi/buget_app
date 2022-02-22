@@ -2,4 +2,4 @@
 const contextReducer= (state,action)=>{
 
 }
-export default contextReducer
+export default contextReducer;
