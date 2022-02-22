@@ -11,7 +11,9 @@ export const ExpenseTrackerContext = createContext(initialState);
 //useReducer hook i.e complex version of useState
 const [transactions, dispatch] = useReducer(contextReducer,initialState);//reducer functiondefining hoe we change our state
 //Actions/action creators
-
+ const deleteTransaction =(id)=>{
+   dispatch({type:'DELETE_TRANSACTION',payload:id})
+ }
    //return jsx 
    return(
        <ExpenseTrackerContext.Provider value ={{appName:'Expense Tracker'}}>
