@@ -15,7 +15,13 @@ const List = () => {
     <MUIList dense ={false} className={classes.List}>
         {transactions.map((transaction)=>(
             <Slide direction="down" in mountOnEnter unmountOnExit key ={transaction.id}>
-              
+              <ListItem>
+                  <ListItemAvatar>
+                      <Avatar className ={transaction.type ==='Income'?classes.avatarIncome:classes.avatarExpense}>
+
+                      </Avatar>
+                  </ListItemAvatar>
+              </ListItem>
             </Slide>
         ))}
     </MUIList>
