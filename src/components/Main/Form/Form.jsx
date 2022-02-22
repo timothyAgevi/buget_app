@@ -31,11 +31,15 @@ const Form = () => {
        </Select>
       </FormControl>
      </Grid>
+
      <Grid item xs ={6}>
-         
          <Textfield  type= "number" label ="Amount" fullWidth/>
-         
-     </Grid>
+       </Grid>
+
+       <Grid item xs ={6}>
+         <Textfield  type= "date" label ="Date" fullWidth/>
+       </Grid>
+
    </Grid>
   )
 }
