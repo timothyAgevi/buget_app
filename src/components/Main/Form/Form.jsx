@@ -1,5 +1,5 @@
 import React from 'react'
-import { Textfiels,Typography,Grid,Button,FormControl,InputLabel,Select,MenuItem} from '@material-ui/core'
+import { TextField,Typography,Grid,Button,FormControl,InputLabel,Select,MenuItem} from '@material-ui/core'
  import useStyles from './styles'
 
 const Form = () => {
@@ -33,11 +33,11 @@ const Form = () => {
      </Grid>
 
      <Grid item xs ={6}>
-         <Textfield  type= "number" label ="Amount" fullWidth/>
+         <TextField type= "number" label ="Amount" fullWidth/>
        </Grid>
 
        <Grid item xs ={6}>
-         <Textfield  type= "date" label ="Date" fullWidth/>
+         <TextField  type= "date" label ="Date" fullWidth/>
        </Grid>
        <Button className={classes.button} variant="outlined" color ="primary" fullWidth>Create </Button>
 
