@@ -1,4 +1,5 @@
 import React,{ userReducer,createContext}from 'react';
 
 const initialState = [];
-const ExpenseTrackerContext = createContext(initailState);
+ export const ExpenseTrackerContext = createContext(initailState);
+
