@@ -13,8 +13,9 @@ const Main = () => {
         try saying :Add income for $100 incategory Salary for monday
     </Typography>
     <Divider/>
+     {/* Form */}
     </CardContent>
-    {/* Form */}
+   
     
 </Card>
     )
