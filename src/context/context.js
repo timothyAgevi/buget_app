@@ -16,11 +16,11 @@ const [transactions, dispatch] = useReducer(contextReducer,initialState);//reduc
  const addTransaction= (transaction)=>{dispatch({ type:'ADD_TRASACTION',payload:transaction});//err transactions
  }
    //return jsx 
-   return(
-       <ExpenseTrackerContext.Provider value ={{
-        deleteTransaction,
-        addTransaction
-       }}>
+  //  return(
+  //      <ExpenseTrackerContext.Provider value ={{
+  //       deleteTransaction,
+  //       addTransaction
+  //      }}>
            {children}
        </ExpenseTrackerContext.Provider>
    )
