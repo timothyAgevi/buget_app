@@ -10,7 +10,7 @@ const List = () => {
 //   const { transactions, deleteTransaction } = useContext(ExpenseTrackerContext);
  const transactions = []
   return (
-    <MUIList dense ={false}>
+    <MUIList dense ={false} className={classes.List}>
         {transactions.map((transaction)=>(
             <Slide>
               
