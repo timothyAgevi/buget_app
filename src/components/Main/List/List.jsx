@@ -13,7 +13,7 @@ const List = () => {
     <MUIList>
         {transactions.map((transaction)=>(
             <Slide>
-
+              
             </Slide>
         ))}
     </MUIList>
