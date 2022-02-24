@@ -3,7 +3,7 @@ import React,{ useReducer,createContext}from 'react';
 import  contextReducer from './contextReducer';
 const initialState = [];
 
-//create own initialstate
+//create own context with initialstate
 export const ExpenseTrackerContext = createContext(initialState);
 
 //functional Component
