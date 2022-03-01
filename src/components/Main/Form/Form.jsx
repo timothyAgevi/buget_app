@@ -34,7 +34,7 @@ const Form = () => {
      <Grid item xs ={6}>
       <FormControl fullWidth>
        <InputLabel> Category</InputLabel>
-       <Select>
+       <Select value ={formData.category} onChange={ (e)=>setFormData({...formData,category:e.target.value})}>
        <MenuItem value ="business">Business</MenuItem>
         <MenuItem value ="salary">Salary</MenuItem>
        </Select>
