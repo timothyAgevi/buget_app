@@ -9,7 +9,8 @@ const contextReducer= (state,action)=>{
         case 'ADD_TRANSACTION':
             const transaction =[action.payload,...state];
             return transactions;
-            break;
+        default:   
+              break;
     }
 
 
