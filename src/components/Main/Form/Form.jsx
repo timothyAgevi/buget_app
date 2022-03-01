@@ -6,16 +6,13 @@ import { TextField,Typography,Grid,Button,FormControl,InputLabel,Select,MenuItem
 const initialState={
   amount:'',
   category:'',
-  types:'', 
+  types:'Income', 
   date:new Date()
 }
 
-
-
-
-
 const Form = () => {
     const classes =useStyles();
+    const {formData,setFormData}=useState(initialState)
   return (
    <Grid container spacing ={2}>
      <Grid items xs={12}> 
