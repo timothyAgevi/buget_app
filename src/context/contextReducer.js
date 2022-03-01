@@ -12,7 +12,7 @@ const contextReducer= (state,action)=>{
             transactions=[action.payload,...state];
             return transactions;
         default:   
-              break;
+              return state;
     }
 
 
