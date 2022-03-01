@@ -8,7 +8,7 @@ import useStyles from "./styles" ;
 const List = () => {
   const classes = useStyles();
 //   const { transactions, deleteTransaction } = useContext(ExpenseTrackerContext);
-const {deleteTransaction} =useContext(ExpenseTrackerContext);
+const {transactions} =useContext(ExpenseTrackerContext);
 
  const transactions = [
      { id :1, type:"Income",category:'Salary', amount :50,date :'Wed Feb 22'},
@@ -19,7 +19,7 @@ const {deleteTransaction} =useContext(ExpenseTrackerContext);
   return (
     <MUIList dense ={false} className={classes.List}>
         {transactions.map((transaction)=>(
-            <Slide direction="down" in mountOnEnter unmountOnExit key ={transaction.id}>
+            <Slide direction="down" in mountOnEnter unmountOnExit key ={transactions.id}>
               <ListItem>
                   <ListItemAvatar>
                       <Avatar className ={transaction.type ==='Income'?classes.avatarIncome:classes.avatarExpense}>
