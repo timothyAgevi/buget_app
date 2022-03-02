@@ -13,7 +13,12 @@ const initialState={
 
 const Form = () => {
     const classes =useStyles();
-    const {formData,setFormData}=useState(initialState)
+    const {formData,setFormData}=useState(initialState);
+    const {addTransaction}=useContext(ExpenseTrackerContext);
+    const createTransaction=()=>{
+      const transaction= {...formData,amount:Number(formData.amount),id :}
+      addTransaction()
+    }
     console.log(formData);
   return (
    <Grid container spacing ={2}>
@@ -50,7 +55,7 @@ const Form = () => {
        <Grid item xs ={6}>
          <TextField  type= "date" label ="Date" fullWidth value ={formData.date} onchange={(e)=>setFormData({...formData,date: e.target.value}) }/>
        </Grid>
-       <Button className={classes.button} variant="outlined" color ="primary" fullWidth>Create </Button>
+       <Button className={classes.button} variant="outlined" color ="primary" fullWidth onclick={createTransaction}>Create </Button>
 
    </Grid>
   ) 
