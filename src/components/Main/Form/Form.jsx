@@ -13,6 +13,7 @@ const initialState={
 const Form = () => {
     const classes =useStyles();
     const {formData,setFormData}=useState(initialState)
+    console.log(formData);
   return (
    <Grid container spacing ={2}>
      <Grid items xs={12}> 
