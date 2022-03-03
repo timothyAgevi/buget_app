@@ -9,6 +9,7 @@ export const ExpenseTrackerContext = createContext(initialState);
 //functional Component
  export const Provider = ({ children})=>{
 //useReducer hook i.e complex version of useState
+//eslint-disable-next-line
 const [transactions, dispatch] = useReducer(contextReducer,initialState);//reducer function defining how we change our state
 //Actions/action creators
 //actions :type +payload
@@ -19,6 +20,7 @@ const [transactions, dispatch] = useReducer(contextReducer,initialState);//reduc
    //return jsx 
    return(
        <ExpenseTrackerContext.Provider value ={{
+         transactions,
         deleteTransaction,
         addTransaction
        }}>

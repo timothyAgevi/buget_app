@@ -8,7 +8,7 @@ import useStyles from './styles'
 const initialState={
   amount:'',
   category:'',
-  types:'Income', 
+  type:'Income', 
   date:new Date()
 }
 
@@ -34,7 +34,7 @@ const Form = () => {
      <Grid item xs ={6}>
        <FormControl fullWidth>
         <InputLabel> Type </InputLabel>
-        <Select value ={formData.type} onChange={ (e)=>setFormData({...formData,type:e.target.value})}>
+        <Select value ={formData?.type} onChange={ (e)=>setFormData({...formData,type:e.target.value})}>
             <MenuItem value ="Income">Income</MenuItem>
             <MenuItem value ="Expense">Expense</MenuItem>
         </Select>
@@ -44,7 +44,7 @@ const Form = () => {
      <Grid item xs ={6}>
       <FormControl fullWidth>
        <InputLabel> Category</InputLabel>
-       <Select value ={formData.category} onChange={ (e)=>setFormData({...formData,category:e.target.value})}>
+       <Select value ={formData?.category} onChange={ (e)=>setFormData({...formData,category:e.target.value})}>
        <MenuItem value ="business">Business</MenuItem>
         <MenuItem value ="salary">Salary</MenuItem>
        </Select>
@@ -52,11 +52,11 @@ const Form = () => {
      </Grid>
 
      <Grid item xs ={6}>
-         <TextField type= "number" label ="Amount" fullWidth value ={formData.amount} onchange={(e)=>setFormData({...formData,amount : e.target.value}) }/>
+         <TextField type= "number" label ="Amount" fullWidth value ={formData?.amount} onchange={(e)=>setFormData({...formData,amount : e.target.value}) }/>
        </Grid>
 
        <Grid item xs ={6}>
-         <TextField  type= "date" label ="Date" fullWidth value ={formData.date} onchange={(e)=>setFormData({...formData,date: e.target.value}) }/>
+         <TextField  type= "date" label ="Date" fullWidth value ={formData?.date} onchange={(e)=>setFormData({...formData,date: e.target.value}) }/>
        </Grid>
        <Button className={classes.button} variant="outlined" color ="primary" fullWidth onclick={createTransaction}>Create </Button>
 
