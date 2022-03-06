@@ -9,5 +9,6 @@ const useTransactions=(title)=>{
    const selectedCategories = transactions.filter( (t)=>t.type ===title);
     // reduce : sum array values to one value
    const total =selectedCategories.reduce(   (acc,currVal)=>acc+=currVal.amount,0);
-  
+  const categories = title==='Income'?incomeCategories:expenseCategories
+
 }
