@@ -40,6 +40,6 @@ const useTransactions=(title)=>{
       }],
       labels:filteredCategories.map( (c)=>c.type)
   }
-return{ filteredCategories,total,charData}
+return{ total,charData}
 }
 export default useTransactions;
