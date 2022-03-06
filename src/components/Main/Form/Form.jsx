@@ -37,7 +37,7 @@ const Form = () => {
         <InputLabel> Type </InputLabel>
         <Select value ={formData?.type} onChange={ (e)=>setFormData({...formData,type:e.target.value})}>
            
-            <MenuItem value ="Expense">Expense</MenuItem>
+           
         </Select>
        </FormControl>
      </Grid>
