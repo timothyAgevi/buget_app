@@ -37,7 +37,8 @@ const useTransactions=(title)=>{
       datasets:[{
           data:filteredCategories.map( (c)=>c.amount),
           backgroundColor:filteredCategories.map( (c)=>c.color)
-      }]
+      }],
+      labels:
   }
 
 }
