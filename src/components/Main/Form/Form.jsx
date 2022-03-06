@@ -23,7 +23,7 @@ const Form = () => {
       setFormData(initialState);
     }
    // console.log(formData);
-   const selectedCategories=formData.type ==='Income'?incomeCategories:expenseCategories;
+   const selectedCategories=formData?.type ==='Income'?incomeCategories:expenseCategories;
   return (
    <Grid container spacing ={2}>
      <Grid items xs={12}> 
@@ -36,7 +36,7 @@ const Form = () => {
        <FormControl fullWidth>
         <InputLabel> Type </InputLabel>
         <Select value ={formData?.type} onChange={ (e)=>setFormData({...formData,type:e.target.value})}>
-           
+        {selectedCategories.map((c) => <MenuItem key={c.type} value={c.type}>{c.type}</MenuItem>)}
            
         </Select>
        </FormControl>
