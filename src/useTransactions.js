@@ -32,4 +32,9 @@ const useTransactions=(title)=>{
   })
   // categories where amount =<0
   const filteredCategories =categories.filter( (c)=>c.amount>0)
+   
+  const charData={
+      
+  }
+
 }
