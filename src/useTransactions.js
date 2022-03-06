@@ -28,5 +28,6 @@ const useTransactions=(title)=>{
 
   transactionsPerType.forEach( (t)=>{
       const category=categories.find( (c)=>c.type===t.category)
+      if(category)category.amount +=t.amount;
   })
 }
