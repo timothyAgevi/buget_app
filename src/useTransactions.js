@@ -7,4 +7,6 @@ const useTransactions=(title)=>{
    resetCategories();
    const {transactions}=useContext(ExpenseTrackerContext);
    const selectedCategories = transactions.filter( (t)=>t.type ===title);
+   const total =selectedCategories.reduce(   (acc,currVal)=>acc+=currVal.amount);
+   // reduce : sum array values to one value
 }
