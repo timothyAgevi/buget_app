@@ -29,13 +29,7 @@ const Form = () => {
    <Grid container spacing ={2}>
      <Grid items xs={12}> 
      <Typography align ="centre" variant ="subtitle2"gutterBottom>
-          {
-            segment?(
-              <>
-              { segment.words.map( (w)=>w.value).join(" ")}
-              </>
-            ):null
-          }
+          { segment && segment.words.map(  (w)=>w.value).join(" ")}
      </Typography>  
      </Grid>
 
