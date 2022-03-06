@@ -2,6 +2,19 @@ import { useContext } from "react";
 import { ExpenseTrackerContext } from "./context/context";
 import { incomeCategories,expenseCategories,resetCategories } from "./constants/categories";
 
+
+//{  id:1,type:'Income',amount:50,category:'Salary'}
+//{  id:1,type:'Income',amount:50,category:'Salary'}
+//{  id:1,type:'Income',amount:50,category:'Salary'}
+
+
+// export const incomeCategories = [
+//     { type: 'Business', amount: 0, color: incomeColors[0] },
+//     { type: 'Investments', amount: 0, color: incomeColors[1] },
+//     { type: 'Extra income', amount: 0, color: incomeColors[2] },
+
+
+
 //custom hook:arrow function that starts with use
 const useTransactions=(title)=>{
    resetCategories();
