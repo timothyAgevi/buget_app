@@ -28,7 +28,7 @@ const Form = () => {
      <Grid items xs={12}> 
      <Typography align ="centre" variant ="subtitle2"gutterBottom>
           ...
-     </Typography>
+     </Typography>  
      </Grid>
 
      <Grid item xs ={6}>
