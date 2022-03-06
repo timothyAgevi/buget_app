@@ -17,7 +17,7 @@ const Form = () => {
     const classes =useStyles();
     const {formData,setFormData}=useState(initialState);
     const {addTransaction}=useContext(ExpenseTrackerContext);
-    
+    const {segment}=useSpeechContext();
     const createTransaction=()=>{
       const transaction= {...formData,amount:Number(formData.amount),id :uuidv4()}
       addTransaction(transaction);
