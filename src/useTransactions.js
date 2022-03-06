@@ -11,4 +11,5 @@ const useTransactions=(title)=>{
    const total =selectedCategories.reduce(   (acc,currVal)=>acc+=currVal.amount,0);
   const categories = title==='Income'?incomeCategories:expenseCategories
 
+  console.log({selectedCategories,total,categories});
 }
