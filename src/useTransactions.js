@@ -5,5 +5,6 @@ import { incomeCategories,expenseCategories,resetCategories } from "./constants/
 //custom hook:arrow function that starts with use
 const useTransactions=(title)=>{
    resetCategories();
-   const {transactions}=useContext(ExpenseTrackerContext)
+   const {transactions}=useContext(ExpenseTrackerContext);
+   
 }
