@@ -32,9 +32,9 @@ const Form = () => {
           {
             segment?(
               <>
-              { }
+              { segment.words.map( (w)=>w.value).join(" ")}
               </>
-            )
+            ):null
           }
      </Typography>  
      </Grid>
