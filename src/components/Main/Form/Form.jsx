@@ -4,7 +4,7 @@ import { ExpenseTrackerContext } from '../../../context/context'
 import { v4 as uuidv4 }from 'uuid';
 import useStyles from './styles'
 import { incomeCategories,expenseCategories } from '../../../constants/categories';
-
+import formatDate from '../../../utils/formatDate';
 const initialState={
   amount:'',
   category:'',
