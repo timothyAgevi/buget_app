@@ -23,7 +23,7 @@ const App = () => {
        </Grid>
    </Grid>
    <PushToTalkButtonContainer>
-       
+       <PushToTalkButton></PushToTalkButton>
    </PushToTalkButtonContainer>
    </div>
   )
