@@ -18,11 +18,14 @@ const Form = () => {
     const {formData,setFormData}=useState(initialState);
     const {addTransaction}=useContext(ExpenseTrackerContext);
     const {segment}=useSpeechContext();
+
     const createTransaction=()=>{
       const transaction= {...formData,amount:Number(formData.amount),id :uuidv4()}
       addTransaction(transaction);
       setFormData(initialState);
     }
+//use effect:call specific function at certain point in components,e,g start,onchange
+//logic to add transaction usig voice
    // console.log(formData);
    const selectedCategories=formData?.type ==='Income'?incomeCategories:expenseCategories;
   return (
