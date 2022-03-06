@@ -42,3 +42,4 @@ const useTransactions=(title)=>{
   }
 return{ filteredCategories,total,charData}
 }
+export default useTransactions;
