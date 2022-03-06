@@ -26,6 +26,11 @@ const Form = () => {
     }
 //use effect:call specific function at certain point in components,e,g start,onchange
 //logic to add transaction usig voice
+//useEffecrt, 2parameters : 1.callback function 2.dependanct array
+useEffect( () =>{
+  
+})
+
    // console.log(formData);
    const selectedCategories=formData?.type ==='Income'?incomeCategories:expenseCategories;
   return (
