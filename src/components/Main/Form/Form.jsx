@@ -32,7 +32,7 @@ const Form = () => {
           {
             segment?(
               <>
-              
+              { }
               </>
             )
           }
