@@ -10,5 +10,5 @@ ReactDom.render(
 <Provider>
 <App/>
 </Provider>,
-</SpeechProvider>
+</SpeechProvider>,
  document.getElementById('root'));
