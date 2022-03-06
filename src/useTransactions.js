@@ -30,4 +30,6 @@ const useTransactions=(title)=>{
       const category=categories.find( (c)=>c.type===t.category)
       if(category)category.amount +=t.amount;
   })
+  // categories where amount =<0
+  const filteredCategories =categories.filter( (c)=>c.amount>0)
 }
