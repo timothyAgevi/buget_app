@@ -36,7 +36,7 @@ const useTransactions=(title)=>{
   const charData={
       datasets:[{
           data:filteredCategories.map( (c)=>c.amount),
-          backgroundColor:
+          backgroundColor:filteredCategories.map( (c)=>c.color)
       }]
   }
 
