@@ -34,7 +34,9 @@ const useTransactions=(title)=>{
   const filteredCategories =categories.filter( (c)=>c.amount>0)
    
   const charData={
-      
+      datasets:[{
+          
+      }]
   }
 
 }
