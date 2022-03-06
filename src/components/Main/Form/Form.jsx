@@ -28,8 +28,8 @@ const Form = () => {
 //logic to add transaction usig voice
 //useEffecrt, 2parameters : 1.callback function 2.dependanct array
 useEffect( () =>{
-  
-})
+
+},[])
 
    // console.log(formData);
    const selectedCategories=formData?.type ==='Income'?incomeCategories:expenseCategories;
