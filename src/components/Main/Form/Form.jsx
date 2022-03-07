@@ -36,8 +36,11 @@ useEffect( () =>{
     }else if( segment.isFinal && segment.intent.intent==="create_transaction"){
       return createTransaction()
     }else if (segment.isFinal && segment.intent.intent==="cancel_transaction"){
-      return setFormData(initialState)
+      return setFormData(initialState);
     }
+    segment.entities.forEach( (e)=>{
+      
+    })
  }
 },[segment])
 
