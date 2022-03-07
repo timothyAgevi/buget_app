@@ -31,8 +31,9 @@ useEffect( () =>{
  
 },[])
 
-   // console.log(formData);
-   const selectedCategories=formData?.type ==='Income'?incomeCategories:expenseCategories;
+  
+   const selectedCategories =formData?.type ==='Income'? incomeCategories:expenseCategories;
+   
   return (
    <Grid container spacing ={2}>
      <Grid items xs={12}> 
@@ -57,7 +58,7 @@ useEffect( () =>{
        <InputLabel> Category</InputLabel>
        <Select value ={formData?.category} onChange={ (e)=>setFormData({...formData,category:e.target.value})}>
        {selectedCategories.map((c) => <MenuItem key={c.type} value={c.type}>{c.type}</MenuItem>)}
-
+        
 
        </Select>
       </FormControl>
@@ -76,4 +77,4 @@ useEffect( () =>{
   ) 
 }
 
-export default Form
+export default Form ;
