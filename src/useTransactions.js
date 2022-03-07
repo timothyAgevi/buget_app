@@ -33,13 +33,13 @@ const useTransactions=(title)=>{
   // categories where amount =<0
   const filteredCategories =categories.filter( (c)=>c.amount>0)
    
-  const charData={
+  const chartData={
       datasets:[{
           data:filteredCategories.map( (c)=>c.amount),
           backgroundColor:filteredCategories.map( (c)=>c.color)
       }],
       labels:filteredCategories.map( (c)=>c.type)
   }
-return{ total,charData}
+return{ total,chartData}
 }
 export default useTransactions;
