@@ -33,7 +33,7 @@ useEffect( () =>{
       setFormData({...formatDate,type:'Expense'})
     } else if(segment.intent.intent==='add_income'){
       setFormData( { ...formData,type:'Income'});
-    }
+    }else if( segment.isFinal && segment.intent.intent===)
  }
 },[segment])
 
