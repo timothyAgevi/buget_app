@@ -28,7 +28,9 @@ const Form = () => {
 //logic to add transaction usig voice
 //useEffecrt, 2parameters : 1.callback function 2.dependanct array
 useEffect( () =>{
- 
+ if(segment){//if segment exists
+
+ }
 },[segment])
 
   
