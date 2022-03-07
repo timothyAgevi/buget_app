@@ -45,6 +45,7 @@ useEffect( () =>{
           break;
           case 'category':
           setFormData({...formData,category:e.value})
+          break;
           case 'date':
           setFormData({...formData,date:e.value})
           default:
