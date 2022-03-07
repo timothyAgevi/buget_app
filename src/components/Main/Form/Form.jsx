@@ -35,7 +35,9 @@ useEffect( () =>{
       setFormData( { ...formData,type:'Income'});
     }else if( segment.isFinal && segment.intent.intent==="create_transaction"){
       return createTransaction()
-    }else if (segment.isFinal && segment.intent.intent==="cancel_transaction")
+    }else if (segment.isFinal && segment.intent.intent==="cancel_transaction"){
+      return setFormData(initialState)
+    }
  }
 },[segment])
 
