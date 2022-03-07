@@ -28,7 +28,7 @@ const Form = () => {
 //logic to add transaction usig voice
 //useEffecrt, 2parameters : 1.callback function 2.dependanct array
 useEffect( () =>{
-
+ 
 },[])
 
    // console.log(formData);
@@ -45,8 +45,9 @@ useEffect( () =>{
        <FormControl fullWidth>
         <InputLabel> Type </InputLabel>
         <Select value ={formData?.type} onChange={ (e)=>setFormData({...formData,type:e.target.value})}>
-        {selectedCategories.map((c) => <MenuItem key={c.type} value={c.type}>{c.type}</MenuItem>)}
-           
+        {/* {selectedCategories.map((c) => <MenuItem key={c.type} value={c.type}>{c.type}</MenuItem>)} */}
+         <MenuItem value ="Income">Income</MenuItem>  
+         <MenuItem value ="Expense">Expense</MenuItem> 
         </Select>
        </FormControl>
      </Grid>
@@ -55,8 +56,11 @@ useEffect( () =>{
       <FormControl fullWidth>
        <InputLabel> Category</InputLabel>
        <Select value ={formData?.category} onChange={ (e)=>setFormData({...formData,category:e.target.value})}>
-       <MenuItem value ="business">Business</MenuItem>
-        <MenuItem value ="salary">Salary</MenuItem>
+       {selectedCategories.map((c) => <MenuItem key={c.category} value={c.category}>{c.category}</MenuItem>)}
+
+
+       {/* <MenuItem value ="business">Business</MenuItem>
+        <MenuItem value ="salary">Salary</MenuItem> */}
        </Select>
       </FormControl>
      </Grid>
