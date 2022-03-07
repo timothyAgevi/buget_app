@@ -29,11 +29,11 @@ const Form = () => {
 //useEffecrt, 2parameters : 1.callback function 2.dependanct array
 useEffect( () =>{
  
-},[])
+},[segment])
 
   
    const selectedCategories =formData?.type ==='Income'? incomeCategories:expenseCategories;
-   
+
   return (
    <Grid container spacing ={2}>
      <Grid items xs={12}> 
