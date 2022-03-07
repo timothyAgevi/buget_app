@@ -9,6 +9,6 @@ ReactDom.render(
     <SpeechProvider appId='07e558a3-d102-4cea-98d5-776b127f4100' language ='en-US'>
 <Provider>
 <App/>
-</Provider>,
+</Provider>
 </SpeechProvider>,
  document.getElementById('root'));
