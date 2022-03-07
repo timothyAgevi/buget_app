@@ -41,7 +41,14 @@ useEffect( () =>{
     segment.entities.forEach( (e)=>{
       switch (e.type){
         case 'amount':
-          setFormData({...formatDate,})
+          setFormData({...formData,amount:e.value})
+          break;
+          case 'category':
+          setFormData({...formData,category:e.value})
+          case 'date':
+          setFormData({...formData,date:e.value})
+          default:
+            break;
       }
     })
  }
