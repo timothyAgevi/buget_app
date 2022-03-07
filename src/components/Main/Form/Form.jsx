@@ -29,7 +29,9 @@ const Form = () => {
 //useEffecrt, 2parameters : 1.callback function 2.dependanct array
 useEffect( () =>{
  if(segment){//if segment exists
-
+    if(segment.intent.intent==='add_expense'){
+      setFormData({...formatDate,type:'Expense'})
+    } 
  }
 },[segment])
 
