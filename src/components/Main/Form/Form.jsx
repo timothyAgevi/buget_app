@@ -39,7 +39,7 @@ useEffect( () =>{
       return setFormData(initialState);
     }
     segment.entities.forEach( (e)=>{
-      const category =`${e.value.charAt(0)}${s.value.slice(1)}}`
+      const category =`${e.value.charAt(0)}${s.value.slice(1)}`
       switch (e.type){
         case 'amount':
           setFormData({...formData,amount:e.value})
