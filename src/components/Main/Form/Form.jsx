@@ -56,11 +56,9 @@ useEffect( () =>{
       <FormControl fullWidth>
        <InputLabel> Category</InputLabel>
        <Select value ={formData?.category} onChange={ (e)=>setFormData({...formData,category:e.target.value})}>
-       {selectedCategories.map((c) => <MenuItem key={c.category} value={c.category}>{c.category}</MenuItem>)}
+       {selectedCategories.map((c) => <MenuItem key={c.type} value={c.type}>{c.type}</MenuItem>)}
 
 
-       {/* <MenuItem value ="business">Business</MenuItem>
-        <MenuItem value ="salary">Salary</MenuItem> */}
        </Select>
       </FormControl>
      </Grid>
