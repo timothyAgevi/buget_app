@@ -15,7 +15,7 @@ const Details = ( {title} ) => {
       <Doughnut data ={chartData}/>
     </CardContent>
     </Card>
-  )
+  );
 }
 
 export default Details
