@@ -6,6 +6,7 @@ import { useSpeechContext } from '@speechly/react-client';
 import useStyles from './styles'
 import { incomeCategories,expenseCategories } from '../../../constants/categories';
 import formatDate from '../../../utils/formatDate';
+import CustomizedSnackbar from '../../Snackbar';
 const initialState={
   amount:'',
   category:'',
@@ -22,7 +23,7 @@ const Form = () => {
 
     const createTransaction=()=>{
       if(Number.isNaN(Number(formData.amount)) || !formData.date.includes('-') )return;
-      
+
       const transaction= {...formData,amount:Number(formData.amount),id :uuidv4()}
       addTransaction(transaction);
       setFormData(initialState);
@@ -72,7 +73,8 @@ useEffect( () =>{
    const selectedCategories =formData?.type ==='Income'? incomeCategories:expenseCategories;
 
   return (
-   <Grid container spacing ={2}>
+       <Grid container spacing ={2}>
+         <CustomizedSnackbar/>
      <Grid items xs={12}> 
      <Typography align ="centre" variant ="subtitle2"gutterBottom>
           { segment && segment.words.map(  (w)=>w.value).join(" ")}
