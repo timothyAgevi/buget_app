@@ -46,7 +46,10 @@ useEffect( () =>{
           setFormData({...formData,amount:e.value})
           break;
           case 'category ':
-          setFormData({...formData,category})
+            if(incomeCategories.map( (ic) => ic.type).includes(category)){
+              setFormData({...formData,category})
+            }
+         
           break;
           case 'date':
           setFormData({...formData,date:e.value})
