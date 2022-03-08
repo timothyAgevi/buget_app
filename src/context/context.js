@@ -31,9 +31,10 @@ const [transactions, dispatch] = useReducer(contextReducer,initialState);//reduc
    //return jsx 
    return(
        <ExpenseTrackerContext.Provider value ={{
+         deleteTransaction,
+         addTransaction,
          transactions,
-        deleteTransaction,
-        addTransaction
+         balance
        }}>
            {children}
        </ExpenseTrackerContext.Provider>
