@@ -74,7 +74,7 @@ useEffect( () =>{
 
   return (
        <Grid container spacing ={2}>
-         <CustomizedSnackbar/>
+         <CustomizedSnackbar open={open} setOpen={setOpen}/>
      <Grid items xs={12}> 
      <Typography align ="centre" variant ="subtitle2"gutterBottom>
           { segment && segment.words.map(  (w)=>w.value).join(" ")}
