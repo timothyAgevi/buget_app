@@ -27,7 +27,7 @@ const [transactions, dispatch] = useReducer(contextReducer,initialState);//reduc
 
  const addTransaction= (transaction)=>{dispatch({ type:'ADD_TRASACTION',payload:transaction})};//err transactions
  
- const balance =transactions.reduce();
+ const balance =transactions.reduce( (acc,currVal)=>{ },0);
    //return jsx 
    return(
        <ExpenseTrackerContext.Provider value ={{
