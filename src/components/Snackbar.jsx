@@ -4,9 +4,9 @@ import MuiAlert from '@material-ui/lab/Alert';
 
 import useStyles from './styles';
 
-const CustomizedSnackbar = () => {
+const CustomizedSnackbar = (open,setOpen) => {
     const classes= useStyles();
-    
+
     const handleClose =  (event,reason) =>{ 
         if(reason==='clickaway')return;
     }
