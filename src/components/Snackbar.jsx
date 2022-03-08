@@ -14,7 +14,7 @@ open ={true}
 autoHideDuration={3000}
 onclose={handleClose}
 >
-
+<MuiAlert/>
 </Snackbar>
     </div>
   )
