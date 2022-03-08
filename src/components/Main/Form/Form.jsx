@@ -40,7 +40,7 @@ useEffect( () =>{
       return setFormData(initialState);
     }
     segment.entities.forEach( (e)=>{
-      const category =`${e.value.charAt(0)}${e.value.slice(1)}`
+      const category =`${e.value.charAt(0)}${e.value.slice(1).toLocaleLowerCase()}`
       switch (e.type){
         case 'amount':
           setFormData({...formData,amount:e.value})
@@ -56,7 +56,7 @@ useEffect( () =>{
       }
     })
  }
-},[segment,formData,setFormData])
+},[segment,createTransaction,formData,setFormData])
 
   
    const selectedCategories =formData?.type ==='Income'? incomeCategories:expenseCategories;
