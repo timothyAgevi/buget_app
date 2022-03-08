@@ -8,7 +8,12 @@ const CustomizedSnackbar = () => {
     const classes= useStyles();
   return (
     <div>
-<Snackbar>
+<Snackbar
+anchorOrigin={ { vertical:'top',horizontal:'right'}}
+open ={true}
+autoHideDuration={3000}
+onclose={handleClose}
+>
 
 </Snackbar>
     </div>
