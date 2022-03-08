@@ -45,8 +45,8 @@ useEffect( () =>{
         case 'amount':
           setFormData({...formData,amount:e.value})
           break;
-          case 'category':
-          setFormData({...formData,category:e.value})
+          case 'category ':
+          setFormData({...formData,category})
           break;
           case 'date':
           setFormData({...formData,date:e.value})
