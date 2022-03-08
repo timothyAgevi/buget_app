@@ -25,8 +25,8 @@ const [transactions, dispatch] = useReducer(contextReducer,initialState);//reduc
 //actions :type +payload
  const deleteTransaction =(id)=>{dispatch({type:'DELETE_TRANSACTION',payload:id}) }
 
- const addTransaction= (transaction)=>{dispatch({ type:'ADD_TRASACTION',payload:transaction});//err transactions
- }
+ const addTransaction= (transaction)=>{dispatch({ type:'ADD_TRASACTION',payload:transaction})};//err transactions
+ 
    //return jsx 
    return(
        <ExpenseTrackerContext.Provider value ={{
