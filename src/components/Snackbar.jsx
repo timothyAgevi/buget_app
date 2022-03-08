@@ -5,6 +5,7 @@ import MuiAlert from '@material-ui/lab/Alert';
 import useStyles from './styles';
 
 const CustomizedSnackbar = () => {
+    const classes= useStyles();
   return (
     <div>Snackbar</div>
   )
