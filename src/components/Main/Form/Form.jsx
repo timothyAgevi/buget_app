@@ -6,7 +6,7 @@ import { useSpeechContext } from '@speechly/react-client';
 import useStyles from './styles'
 import { incomeCategories,expenseCategories } from '../../../constants/categories';
 import formatDate from '../../../utils/formatDate';
-import CustomizedSnackbar from '../../Snackbar';
+import CustomizedSnackbar from '../../Snackbar/Snackbar'; 
 const initialState={
   amount:'',
   category:'',
@@ -19,7 +19,7 @@ const Form = () => {
     const {formData,setFormData}=useState(initialState);
     const {addTransaction}=useContext(ExpenseTrackerContext);
     const {segment}=useSpeechContext();
-    const [open,setOpen]=React.useState(false)
+    const [open,setOpen]=useState(false)
 
     const createTransaction=()=>{
       if(Number.isNaN(Number(formData.amount)) || !formData.date.includes('-') )return;
