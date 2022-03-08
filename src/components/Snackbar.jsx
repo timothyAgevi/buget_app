@@ -4,10 +4,10 @@ import MuiAlert from '@material-ui/lab/Alert';
 
 import useStyles from './styles';
 
-const Snackbar = () => {
+const CustomizedSnackbar = () => {
   return (
     <div>Snackbar</div>
   )
 }
 
-export default Snackbar
+export default CustomizedSnackbar
