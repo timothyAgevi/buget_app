@@ -14,7 +14,10 @@ open ={true}
 autoHideDuration={3000}
 onclose={handleClose}
 >
-<MuiAlert/>
+<MuiAlert   onClose={handleClose} severity ="success" elevation={6} variant="filled">
+    
+    transaction sucessfully created
+    </MuiAlert> 
 </Snackbar>
     </div>
   )
