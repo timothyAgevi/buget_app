@@ -7,7 +7,11 @@ import useStyles from './styles';
 const CustomizedSnackbar = () => {
     const classes= useStyles();
   return (
-    <div>Snackbar</div>
+    <div>
+<Snackbar>
+
+</Snackbar>
+    </div>
   )
 }
 
