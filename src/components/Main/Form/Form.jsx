@@ -18,12 +18,13 @@ const Form = () => {
     const {formData,setFormData}=useState(initialState);
     const {addTransaction}=useContext(ExpenseTrackerContext);
     const {segment}=useSpeechContext();
-
+    // const [open,setOpen]=React.useState(false)
+    
     const createTransaction=()=>{
       const transaction= {...formData,amount:Number(formData.amount),id :uuidv4()}
       addTransaction(transaction);
       setFormData(initialState);
-    }
+    };
 //use effect:call specific function at certain point in components,e,g start,onchange
 //logic to add transaction usig voice
 //useEffecrt, 2parameters : 1.callback function 2.dependanct array
@@ -38,23 +39,24 @@ useEffect( () =>{
     }else if (segment.isFinal && segment.intent.intent==="cancel_transaction"){
       return setFormData(initialState);
     }
-    segment.entities.forEach( (e)=>{
-      const category =`${e.value.charAt(0)}${s.value.slice(1)}`
-      switch (e.type){
+    segment.entities.forEach( (s)=>{
+      const category =`${s.value.charAt(0)}${s.value.slice(1)}`
+      switch (s.type){
         case 'amount':
-          setFormData({...formData,amount:e.value})
+          setFormData({...formData,amount:s.value})
           break;
           case 'category':
-          setFormData({...formData,category:e.value})
+          setFormData({...formData,category:s.value})
           break;
           case 'date':
-          setFormData({...formData,date:e.value})
+          setFormData({...formData,date:s.value})
+          break;
           default:
             break;
       }
     })
  }
-},[segment])
+},[segment,createTransaction,formData,setFormData])
 
   
    const selectedCategories =formData?.type ==='Income'? incomeCategories:expenseCategories;
