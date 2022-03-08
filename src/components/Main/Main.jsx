@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import{Card,CardHeader,CardContent,Typography,Grid,Divider}from '@material-ui/core'
 import { ExpenseTrackerContext } from '../../context/context';
 import useStyles from './styles';
@@ -7,6 +7,7 @@ import List from './List/List';
 
 const Main = () => {
     const classes =useStyles();
+    const {balance}=useContext(ExpenseTrackerContext);
   return (
 <Card className={ classes.root}>
     <CardHeader title = "Buget Manager" subheader= "Powered by timothyAgevi"/>
