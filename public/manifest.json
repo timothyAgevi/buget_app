@@ -1,0 +1,9 @@
+{
+    "name": "buget_app",
+    "short_name": "buget_app",
+    "theme_color": "black",
+    "background_color": "black",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/"
+  }
