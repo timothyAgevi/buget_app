@@ -6,7 +6,7 @@ import { Provider } from './context/context';
 import App from './App';
 import './index.css';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import reportWebVitals from './reportWebVitals';
+// import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <SpeechProvider appId="07e558a3-d102-4cea-98d5-776b127f4100" language="en-US">
     <Provider>
@@ -24,5 +24,5 @@ serviceWorkerRegistration.register();
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// reportWebVitals();
 
