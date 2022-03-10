@@ -38,6 +38,15 @@ const NewTransactionForm = () => {
   };
 
   useEffect(() => {
+    const createTransaction = () => {
+      if (Number.isNaN(Number(formData.amount)) || !formData.date.includes('-')) return;
+  
+      if (incomeCategories.map((iC) => iC.type).includes(formData.category)) {
+        setFormData({ ...formData, type: 'Income' });
+      } else if (expenseCategories.map((iC) => iC.type).includes(formData.category)) {
+        setFormData({ ...formData, type: 'Expense' });
+      } }
+
     if (segment) {
       if (segment.intent.intent === 'add_expense') {
         setFormData({ ...formData, type: 'Expense' });
@@ -75,7 +84,7 @@ const NewTransactionForm = () => {
         createTransaction();
       }
     }
-  }, [segment]);
+  }, [segment,formData]);
 
   const selectedCategories = formData.type === 'Income' ? incomeCategories : expenseCategories;
 
