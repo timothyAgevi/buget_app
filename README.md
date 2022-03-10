@@ -1,11 +1,13 @@
-# Speechly Expense Tracker
+# Buget Management System
 
-![Expense Tracker](https://i.ibb.co/VJjj3Kp/Screenshot-2020-12-18-205600.png)
+-This is a system that enables users keep track and categories  their income and expenses ,to know what they spend most on and what earns them more money.
+This is done in a vewry user-friendly way using the form or through speech.
+-It also provides a nice visualization of the data.
 
-## Introduction
-This is a code repository for the corresponding video tutorial - https://youtu.be/NnUFOWR_V4Y.
+come on checking out on https://bugetmanager.netlify.app/
 
-In this video, you're going to build a Complex Expense Budget Tracker. While building it, you're going to learn many advanced React & JavaScript topics. Some of them are State Management in React, Context API, Local Storage, Material UI, and how to create a scalable React folder structure. But most importantly, you're going to learn how to add voice capabilities to your applications using Speechly. 
+
+ 
 
 Setup:
 - run ```npm i && npm start```
