@@ -24,6 +24,7 @@ const NewTransactionForm = () => {
   const [open, setOpen] = React.useState(false);
 
   const createTransaction = () => {
+    console.log("Data ",formData);
     if (Number.isNaN(Number(formData.amount)) || !formData.date.includes('-')) return;
 
     if (incomeCategories.map((iC) => iC.type).includes(formData.category)) {
@@ -36,6 +37,7 @@ const NewTransactionForm = () => {
     addTransaction({ ...formData, amount: Number(formData.amount), id: uuidv4() });
     setFormData(initialState);
   };
+
 
   useEffect(() => {
     const createTransaction = () => {
@@ -125,7 +127,11 @@ const NewTransactionForm = () => {
       <Grid item xs={6}>
         <TextField fullWidth label="Date" type="date" value={formData.date} onChange={(e) => setFormData({ ...formData, date: formatDate(e.target.value) })} />
       </Grid>
+
       <Button className={classes.button} variant="outlined" color="primary" fullWidth onClick={createTransaction}>Create</Button>
+
+
+
     </Grid>
   );
 };
