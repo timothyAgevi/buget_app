@@ -4,16 +4,18 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { useSpeechContext } from '@speechly/react-client';
 import Snackbar from '../../Snackbar/Snackbar';
-import formatDate from '../../../utils/formatDate';
 import { ExpenseTrackerContext } from '../../../context/context';
 import { incomeCategories, expenseCategories } from '../../../constants/categories';
 import useStyles from './styles';
+import "../../../database/connect"
+import {Records}  from "../../../database/index"
+
 
 const initialState = {
   amount: '',
   category: '',
   type: 'Income',
-  date: formatDate(new Date()),
+ 
 };
 
 const NewTransactionForm = () => {
@@ -23,9 +25,22 @@ const NewTransactionForm = () => {
   const { segment } = useSpeechContext();
   const [open, setOpen] = React.useState(false);
 
-  const createTransaction = () => {
+  const createTransaction = async () => {
     console.log("Data ",formData);
-    if (Number.isNaN(Number(formData.amount)) || !formData.date.includes('-')) return;
+
+      var firstRecord=new Records( {formData});
+
+      await firstRecord.save()
+      .then(() => {
+        console.log("Record saved succesfully ")
+      })
+      .catch ((error) => {
+        console.log("Error saving record ", error)
+      })
+
+    // var firstRecord= new Records( {amount:"345",type:"income",category:"salary" });
+
+   
 
     if (incomeCategories.map((iC) => iC.type).includes(formData.category)) {
       setFormData({ ...formData, type: 'Income' });
@@ -41,7 +56,7 @@ const NewTransactionForm = () => {
 
   useEffect(() => {
     const createTransaction = () => {
-      if (Number.isNaN(Number(formData.amount)) || !formData.date.includes('-')) return;
+     
   
       if (incomeCategories.map((iC) => iC.type).includes(formData.category)) {
         setFormData({ ...formData, type: 'Income' });
@@ -74,15 +89,13 @@ const NewTransactionForm = () => {
               setFormData({ ...formData, type: 'Expense', category });
             }
             break;
-          case 'date':
-            setFormData({ ...formData, date: s.value });
-            break;
+        
           default:
             break;
         }
       });
 
-      if (segment.isFinal && formData.amount && formData.category && formData.type && formData.date) {
+      if (segment.isFinal && formData.amount && formData.category && formData.type ) {
         createTransaction();
       }
     }
@@ -124,9 +137,7 @@ const NewTransactionForm = () => {
       <Grid item xs={6}>
         <TextField type="number" label="Amount" value={formData.amount} onChange={(e) => setFormData({ ...formData, amount: e.target.value })} fullWidth />
       </Grid>
-      <Grid item xs={6}>
-        <TextField fullWidth label="Date" type="date" value={formData.date} onChange={(e) => setFormData({ ...formData, date: formatDate(e.target.value) })} />
-      </Grid>
+     
 
       <Button className={classes.button} variant="outlined" color="primary" fullWidth onClick={createTransaction}>Create</Button>
 
